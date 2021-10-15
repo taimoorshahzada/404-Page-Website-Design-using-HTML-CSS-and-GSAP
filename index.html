@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page not Found!</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="logo">
+        Taimoor Shahzada
+    </div>
+    <div class="page-container">
+        <div class="page-not-found">
+            <span>PAGE</span>
+            <span>
+                <div class="span404">404</div>
+                NOT
+            </span>
+            <span>FOUND</span>
+        </div>
+    </div>
+    <div class="home-btn">
+        <button>Take me home</button>
+    </div>
+    <script>
+        const tl = new gsap.timeline();
+        tl.from(".page-not-found span, .logo",{
+            duration: .8,
+            stagger: {
+                amount: .7
+            },
+            y: 200,
+            skewY: 10,
+            opacity: 0
+        })
+        tl.from(".home-btn", {
+            scale: 0,
+            duration: .5,
+            stagger: {
+                amount: .6
+            }
+        },"-=.4")
+    </script>
+</body>
+</html>
